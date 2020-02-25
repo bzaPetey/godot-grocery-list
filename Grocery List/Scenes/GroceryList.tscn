@@ -4,43 +4,51 @@
 
 [node name="GroceryList" type="Node2D"]
 
-[node name="ItemList" type="ItemList" parent="."]
-margin_left = 3.0
-margin_top = 4.0
-margin_right = 363.0
-margin_bottom = 466.0
+[node name="Control" type="Control" parent="."]
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 436.0
+margin_bottom = 594.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 0.93
+margin_bottom = 0.600006
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemEntry" type="LineEdit" parent="."]
-margin_left = 4.16635
-margin_top = 472.338
-margin_right = 264.166
-margin_bottom = 504.338
+[node name="ItemEntry" type="LineEdit" parent="Control"]
+anchor_top = 0.95
+anchor_right = 0.75
+anchor_bottom = 1.0
+margin_left = -0.0340881
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AddItemButton" type="Button" parent="."]
-margin_left = 270.0
-margin_top = 471.0
-margin_right = 313.0
-margin_bottom = 504.0
+[node name="AddItemButton" type="Button" parent="Control"]
+anchor_left = 0.77
+anchor_top = 0.95
+anchor_right = 0.85
+anchor_bottom = 1.0
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RemoveItemButton" type="Button" parent="."]
-margin_left = 321.669
-margin_top = 466.0
-margin_right = 364.669
-margin_bottom = 510.0
+[node name="RemoveItemButton" type="Button" parent="Control"]
+anchor_left = 0.86
+anchor_top = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="AddItemButton" to="ItemList" method="OnAddItemButtonPressed"]
-[connection signal="pressed" from="RemoveItemButton" to="ItemList" method="OnRemoveItemButtonPressed"]
+[connection signal="pressed" from="Control/AddItemButton" to="Control/ItemList" method="OnAddItemButtonPressed"]
+[connection signal="pressed" from="Control/RemoveItemButton" to="Control/ItemList" method="OnRemoveItemButtonPressed"]
