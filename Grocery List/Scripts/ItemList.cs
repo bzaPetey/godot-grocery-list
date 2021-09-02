@@ -1,5 +1,5 @@
 /*
-ItemList.cd
+ItemList.gd
 Peter Laliberte
 
 A simple project to learn some C# using the godot engine.
@@ -21,12 +21,14 @@ public class ItemList : Godot.ItemList
 {
     private LineEdit le;
 
- 
+
+
     public override void _Ready()
     {
         le = GetNode("../ItemEntry") as LineEdit;
         le.ClearButtonEnabled = true;
     }
+
 
 
     public void OnAddItemButtonPressed() {
@@ -45,6 +47,7 @@ public class ItemList : Godot.ItemList
         this.AddItem(le.Text.ToLower());
         le.Clear();
   }
+
 
 
   public void OnRemoveItemButtonPressed() {

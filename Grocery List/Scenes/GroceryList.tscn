@@ -50,5 +50,6 @@ text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Control/AddItemButton" to="Control/ItemList" method="OnAddItemButtonPressed"]
 [connection signal="pressed" from="Control/RemoveItemButton" to="Control/ItemList" method="OnRemoveItemButtonPressed"]
